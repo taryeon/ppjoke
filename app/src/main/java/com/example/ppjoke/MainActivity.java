@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.MenuItem;
 
+import com.example.ppjoke.util.DataBus;
 import com.example.ppjoke.util.NavGraphBuilder;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -32,6 +33,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         navController = NavHostFragment.findNavController(fragment);
         NavGraphBuilder.build(navController,this,fragment.getId());
         navView.setOnNavigationItemSelectedListener(this);
+
+        DataBus.INSTANCE.<String>with("stickyData").setStickyData("MainActivity");
     }
 
     @Override

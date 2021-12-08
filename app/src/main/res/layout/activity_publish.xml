@@ -15,4 +15,12 @@
         android:textAlignment="center"
         android:gravity="center"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送数据"
+        android:layout_marginTop="20dp"
+        android:id="@+id/btn"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
